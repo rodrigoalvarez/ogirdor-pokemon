@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>Ogirdor Pokemon Master</title>
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+    <script src="index.js"></script>
+    <!-- Template -->
+    <script id="pokemon-template" type="text/x-handlebars-template">
+      <div class="pokemon {{ mode }}">
+        <img class="pokemon-image" src="{{ image }}" />
+        <span class="pokemon-id">#{{ id }}</span>
+        <span class="pokemon-name">{{ name }}</span>
+        <span class="pokemon-type">{{ type }}</span>
+        <i class="pokemon-button button-add fa fa-plus-circle" onclick="addPokemon()"></i>
+        <i class="pokemon-button button-remove fa fa-minus-circle" onclick="removePokemon({{ index }})"></i>
+      </div>
+    </script>
+  </header>
+  <body>
+    <div class="main">
+      <!-- Header -->
+      <div class="main-header">
+        <div class="main-image"></div>
+      </div>
+      <!-- Content -->
+      <div class="main-content">
+        <!-- Finder -->
+        <div class="content-block content-finder">
+          <span class="content-title">Finder</span>
+          <input id="pokemonField" />
+          <div id="pokemonResult" class="content-result">
+          </div>
+          <span id="messageFinderDefault" class="content-message">Search a Pokemon by name</span>
+          <span id="messageFinderEmpty" class="content-message">There is no Pokemon with that name</span>
+          <div id="loader" class="loader"></div>
+        </div>
+        <!-- Team -->
+        <div class="content-block content-list">
+          <span class="content-title">Team</span>
+          <div id="pokemonList" class="list-content">
+          </div>
+          <span id="messageListEmpty" class="content-message">You don't have Pokemons on your team</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

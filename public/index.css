@@ -1,0 +1,164 @@
+/* General */
+
+body {
+  margin: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 3px #ddd;
+}
+
+/* Pokemon */
+
+.pokemon {
+  position: relative;
+  display: inline-block;
+  min-width: 120px;
+  padding: 6px;
+  margin-bottom: 4px;
+  border: 2px solid #999;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.pokemon-image {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: auto;
+}
+
+.pokemon-id {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  color: #666;
+}
+
+.pokemon-name {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.pokemon-type {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  color: #666;
+}
+
+.pokemon .pokemon-button {
+  position: absolute;
+  display: block;
+  top: 6px;
+  right: 6px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.pokemon.team .button-add,
+.pokemon.result .button-remove {
+  display: none;
+}
+
+.button-add {
+  color: #4CAF50;
+}
+
+.button-remove {
+  color: #f44336;
+}
+
+/* Layout */
+
+.main-image {
+  height: 120px;
+  margin-bottom: 24px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('./header.png');
+}
+
+.main-content {
+  display: flex;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.content-block {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.content-finder {
+  width: 300px;
+  margin-right: 12px;
+}
+
+.content-list {
+  width: calc(100% - 300px);
+}
+
+.content-result {
+  margin-top: 12px;
+}
+
+.content-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.content-message {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Loader */
+
+.loader {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  border: 4px solid #ccc;
+  border-top: 4px solid #666;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 767px) {
+  .main-content {
+    display: block;
+  }
+
+  .content-finder {
+    width: auto;
+    margin: auto auto 12px auto;
+  }
+  
+  .content-list {
+    width: auto;
+  }
+}
